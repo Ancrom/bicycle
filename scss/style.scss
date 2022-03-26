@@ -1,0 +1,168 @@
+@import "_nullstyle";
+
+@function prc($pxOne, $pxTwo) {
+	$result: ($pxOne / $pxTwo) * 100%;
+	@return $result;
+}
+@function rem($px) {
+	$result: ($px / 16) + rem;
+	@return $result;
+}
+@function em($px) {
+	$result: ($px / 16) + em;
+	@return $result;
+}
+
+$color-menu: #4d4959;
+$text-color: #353738;
+$text-color-second: #848789;
+$bg-color: #f7f7f7;
+
+body {
+	font-family: "lato", sans-serif;
+	font-weight: 400;
+	font-size: rem(18);
+}
+.container {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.main {
+	&__about-us {
+	}
+	&__work {
+	}
+}
+
+// ! HEADER
+
+.header {
+	min-height: 100vh;
+	background: url(/img/top-bg.jpg) center / cover no-repeat;
+	&__menu {
+		padding: 35px 0;
+	}
+}
+.menu {
+	grid-column: 1 / 7;
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 35px;
+	}
+	&__item {
+		color: $color-menu;
+		text-transform: uppercase;
+		font-size: rem(13);
+		font-weight: 700;
+		flex: 0 1 auto;
+	}
+	&__link {
+	}
+}
+.logo {
+}
+
+// ! ABOUT
+
+.about-us {
+	padding: 110px 0 130px;
+	background: $bg-color;
+	&__text-block {
+		grid-column: 2 / 6;
+	}
+}
+.text-block {
+	text-align: center;
+	padding: 50px 70px;
+	&__icon {
+		margin: 0 0 30px 0;
+	}
+	&__title {
+		font-size: rem(18);
+		line-height: 1.7;
+		font-weight: 700;
+		letter-spacing: 3px;
+		color: $text-color;
+		margin: 0 0 15px 0;
+		text-transform: uppercase;
+	}
+	&__text {
+		color: $text-color-second;
+		font-size: rem(18);
+		line-height: 1.8;
+	}
+}
+
+// ! WORK
+
+.work {
+	&__container {
+	}
+	&__bike {
+		&--1 {
+			.bike__big-image {
+				background: url(/img/work/work-01.jpg) center / cover no-repeat;
+			}
+			.bike__small-image {
+				background: url(/img/work/work-small-01.jpg) center / cover no-repeat;
+			}
+		}
+		&--2 {
+			.bike__big-image {
+				background: url(/img/work/work-02.png) center / cover no-repeat;
+			}
+			.bike__small-image {
+				background: url(/img/work/work-small-02.png) center / cover no-repeat;
+			}
+		}
+		&--3 {
+			.bike__medium-image {
+				background: url(/img/work/work-03.png) center / cover no-repeat;
+				&--second {
+					background: url(/img/work/work-04.png) center / cover no-repeat;
+				}
+			}
+			.bike__small-image {
+				background: url(/img/work/work-small-03.png) center / cover no-repeat;
+			}
+		}
+	}
+}
+.bike {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-column: span 6;
+	&__big-image {
+		grid-column: span 4;
+		grid-row: span 3;
+	}
+	&__logo {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__text-block,
+	&__small-image,
+	&__medium-image {
+		grid-column: span 2;
+	}
+	&__text-block {
+		.text-block__text {
+			text-align: left;
+		}
+		grid-row: span 2;
+	}
+	&__small-image {
+		grid-row: span 1;
+	}
+	&__medium-image {
+		grid-row: span 3;
+	}
+}
+
+@import "_media";
