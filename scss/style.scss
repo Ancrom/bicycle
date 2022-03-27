@@ -41,7 +41,7 @@ body {
 
 .header {
 	min-height: 100vh;
-	background: url(/img/top-bg.jpg) center / cover no-repeat;
+	background: url(/img/bg.jpg) center / cover no-repeat;
 	&__menu {
 		padding: 35px 0;
 	}
@@ -106,29 +106,29 @@ body {
 	&__bike {
 		&--1 {
 			.bike__big-image {
-				background: url(/img/work/work-01.jpg) center / cover no-repeat;
+				background: url(/img/work/) center / cover no-repeat;
 			}
 			.bike__small-image {
-				background: url(/img/work/work-small-01.jpg) center / cover no-repeat;
+				background: url(/img/work/) center / cover no-repeat;
 			}
 		}
 		&--2 {
 			.bike__big-image {
-				background: url(/img/work/work-02.png) center / cover no-repeat;
+				background: url(/img/work/) center / cover no-repeat;
 			}
 			.bike__small-image {
-				background: url(/img/work/work-small-02.png) center / cover no-repeat;
+				background: url(/img/work/) center / cover no-repeat;
 			}
 		}
 		&--3 {
 			.bike__medium-image {
-				background: url(/img/work/work-03.png) center / cover no-repeat;
+				background: url(/img/work/) center / cover no-repeat;
 				&--second {
-					background: url(/img/work/work-04.png) center / cover no-repeat;
+					background: url(/img/work/) center / cover no-repeat;
 				}
 			}
 			.bike__small-image {
-				background: url(/img/work/work-small-03.png) center / cover no-repeat;
+				background: url(/img/work/) center / cover no-repeat;
 			}
 		}
 	}
