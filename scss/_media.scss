@@ -54,12 +54,12 @@
 		}
 		&__text-block,
 		&__big-image,
+		&__medium-image,
 		&__small-image {
 			grid-row: span 2;
 		}
-		&__text-block {
-			grid-column: span 6;
-		}
+		&__text-block,
+		&__medium-image,
 		&__small-image {
 			grid-column: span 6;
 		}
@@ -72,6 +72,16 @@
 				}
 				.bike__small-image {
 					order: 3;
+				}
+			}
+			&--3 {
+				.text-block {
+					order: 2;
+				}
+				.bike__medium-image {
+					&--second {
+						order: 3;
+					}
 				}
 			}
 		}
@@ -88,7 +98,7 @@
 		}
 	}
 	.text-block {
-		padding: 15px;
+		padding: 50 15px;
 	}
 	.container {
 	}

@@ -205,6 +205,12 @@ body {
 .bike__big-image {
   grid-column: span 4;
   grid-row: span 3;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.bike__big-image:hover {
+  background-position: top;
 }
 
 .bike__logo {
@@ -229,10 +235,52 @@ body {
 
 .bike__small-image {
   grid-row: span 1;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.bike__small-image:hover {
+  background-position: top;
 }
 
 .bike__medium-image {
   grid-row: span 3;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.bike__medium-image:hover {
+  background-position: top;
+}
+
+.twitter {
+  padding: 120px 0 70px;
+}
+
+.twitter__body {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / 6;
+  text-align: center;
+}
+
+.twitter__icon {
+  margin: 0 0 35px 0;
+}
+
+.twitter__title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin: 0 0 25px 0;
+}
+
+.twitter__title span {
+  color: #848789;
+}
+
+.twitter__text {
+  color: #848789;
+  line-height: 1.7;
 }
 
 @media (max-width: 1199px) {
@@ -288,13 +336,10 @@ body {
   .bike__text-block .text-block__text {
     text-align: center;
   }
-  .bike__text-block, .bike__big-image, .bike__small-image {
+  .bike__text-block, .bike__big-image, .bike__medium-image, .bike__small-image {
     grid-row: span 2;
   }
-  .bike__text-block {
-    grid-column: span 6;
-  }
-  .bike__small-image {
+  .bike__text-block, .bike__medium-image, .bike__small-image {
     grid-column: span 6;
   }
   .work__bike--2 .text-block {
@@ -303,6 +348,16 @@ body {
             order: 2;
   }
   .work__bike--2 .bike__small-image {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .work__bike--3 .text-block {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .work__bike--3 .bike__medium-image--second {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -317,7 +372,7 @@ body {
     display: none;
   }
   .text-block {
-    padding: 15px;
+    padding: 50 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
