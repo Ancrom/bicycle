@@ -165,31 +165,31 @@ body {
 }
 
 .work__bike--1 .bike__big-image {
-  background: url(../img/work/) center/cover no-repeat;
+  background: url(../img/work/01.jpg) center/cover no-repeat;
 }
 
 .work__bike--1 .bike__small-image {
-  background: url(../img/work/) center/cover no-repeat;
+  background: url(../img/work/small-01.jpg) center/cover no-repeat;
 }
 
 .work__bike--2 .bike__big-image {
-  background: url(../img/work/) center/cover no-repeat;
+  background: url(../img/work/02.jpg) center/cover no-repeat;
 }
 
 .work__bike--2 .bike__small-image {
-  background: url(../img/work/) center/cover no-repeat;
+  background: url(../img/work/small-02.jpg) center/cover no-repeat;
 }
 
 .work__bike--3 .bike__medium-image {
-  background: url(../img/work/) center/cover no-repeat;
+  background: url(../img/work/03.jpg) center/cover no-repeat;
 }
 
 .work__bike--3 .bike__medium-image--second {
-  background: url(../img/work/) center/cover no-repeat;
+  background: url(../img/work/04.jpg) center/cover no-repeat;
 }
 
 .work__bike--3 .bike__small-image {
-  background: url(../img/work/) center/cover no-repeat;
+  background: url(../img/work/small-03.jpg) center/cover no-repeat;
 }
 
 .bike {
@@ -255,6 +255,7 @@ body {
 
 .twitter {
   padding: 120px 0 70px;
+  background: #f7f7f7;
 }
 
 .twitter__body {
@@ -281,6 +282,109 @@ body {
 .twitter__text {
   color: #848789;
   line-height: 1.7;
+  margin: 0 0 100px 0;
+}
+
+.twitter__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.twitter__button {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #a9afb3;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.twitter__button:hover {
+  background: #a9afb3;
+}
+
+.twitter__button:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+
+.shop-top {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(160px, 1fr))[6];
+      grid-template-columns: repeat(6, minmax(160px, 1fr));
+}
+
+.shop-top__image {
+  position: relative;
+  padding: 0 0 51% 0;
+}
+
+.shop-top__image:hover > img {
+  -o-object-position: top;
+     object-position: top;
+}
+
+.shop-top__image > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.7s ease-out;
+  transition: 0.7s ease-out;
+}
+
+.shop-top__image--small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.shop-top__image--medium {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.shop-top__image--vertical {
+  grid-column: span 1;
+  grid-row: span 2;
+  padding: 0 0 100% 0;
+}
+
+.shop-top__image--link {
+  grid-column: span 2;
+  grid-row: span 1;
+  background: #58a589;
+}
+
+.shop-top__image--link > img {
+  opacity: 0.2;
+}
+
+.shop-top__image--link:hover > img {
+  opacity: 0.5;
+}
+
+.shop-top__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.shop-top__logo-img {
+  display: block;
+}
+
+.shop-top__logo-text {
+  font-size: 0.875rem;
+  color: #fff;
 }
 
 @media (max-width: 1199px) {
@@ -327,6 +431,15 @@ body {
   .bike__medium-image {
     grid-column: span 3;
   }
+  .twitter__body {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    grid-column: 1 / 7;
+  }
+  .shop-top {
+    -ms-grid-columns: (minmax(160px, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+  }
 }
 
 @media (max-width: 1023px) {
@@ -361,6 +474,9 @@ body {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
+  }
+  .twitter {
+    padding: 50px 25px;
   }
 }
 

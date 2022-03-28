@@ -40,6 +40,14 @@
 			grid-column: span 3;
 		}
 	}
+	.twitter {
+		&__body {
+			grid-column: 1 / 7;
+		}
+	}
+	.shop-top {
+		grid-template-columns: repeat(2, minmax(160px, 1fr));
+	}
 }
 
 @media (max-width: 1023px) {
@@ -85,6 +93,9 @@
 				}
 			}
 		}
+	}
+	.twitter {
+		padding: 50px 25px;
 	}
 }
 

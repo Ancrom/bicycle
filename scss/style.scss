@@ -35,6 +35,8 @@ body {
 	}
 	&__twitter {
 	}
+	&__shop {
+	}
 }
 
 // ! HEADER
@@ -106,29 +108,29 @@ body {
 	&__bike {
 		&--1 {
 			.bike__big-image {
-				background: url(../img/work/) center / cover no-repeat;
+				background: url(../img/work/01.jpg) center / cover no-repeat;
 			}
 			.bike__small-image {
-				background: url(../img/work/) center / cover no-repeat;
+				background: url(../img/work/small-01.jpg) center / cover no-repeat;
 			}
 		}
 		&--2 {
 			.bike__big-image {
-				background: url(../img/work/) center / cover no-repeat;
+				background: url(../img/work/02.jpg) center / cover no-repeat;
 			}
 			.bike__small-image {
-				background: url(../img/work/) center / cover no-repeat;
+				background: url(../img/work/small-02.jpg) center / cover no-repeat;
 			}
 		}
 		&--3 {
 			.bike__medium-image {
-				background: url(../img/work/) center / cover no-repeat;
+				background: url(../img/work/03.jpg) center / cover no-repeat;
 				&--second {
-					background: url(../img/work/) center / cover no-repeat;
+					background: url(../img/work/04.jpg) center / cover no-repeat;
 				}
 			}
 			.bike__small-image {
-				background: url(../img/work/) center / cover no-repeat;
+				background: url(../img/work/small-03.jpg) center / cover no-repeat;
 			}
 		}
 	}
@@ -179,12 +181,11 @@ body {
 	}
 }
 
-
-
 // ! TWITTER
 
 .twitter {
 	padding: 120px 0 70px;
+	background: $bg-color;
 	&__container {
 	}
 	&__body {
@@ -205,12 +206,96 @@ body {
 	&__text {
 		color: $text-color-second;
 		line-height: 1.7;
+		margin: 0 0 100px 0;
 	}
 	&__controls {
+		display: flex;
+		justify-content: center;
+	}
+	&__button {
+		width: 12px;
+		height: 12px;
+		border: 1px solid #a9afb3;
+		border-radius: 50%;
+		cursor: pointer;
+		&:hover {
+			background: #a9afb3;
+		}
+		&:not(:last-child) {
+			margin: 0 10px 0 0;
+		}
+	}
+}
+
+// ! SHOP
+
+.shop {
+	&__container {
+	}
+	&__top {
+	}
+	&__bottom {
 	}
 	&__button {
 	}
 }
-
+.shop-top {
+	display: grid;
+	grid-template-columns: repeat(6, minmax(160px, 1fr));
+	&__image {
+		position: relative;
+		padding: 0 0 51% 0;
+		&:hover > img {
+			object-position: top;
+		}
+		> img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			transition: 0.7s ease-out;
+		}
+		&--small {
+			grid-column: span 1;
+			grid-row: span 1;
+		}
+		&--medium {
+			grid-column: span 2;
+			grid-row: span 1;
+		}
+		&--vertical {
+			grid-column: span 1;
+			grid-row: span 2;
+			padding: 0 0 100% 0;
+		}
+		&--link {
+			grid-column: span 2;
+			grid-row: span 1;
+			background: #58a589;
+			> img {
+				opacity: 0.2;
+			}
+			&:hover > img {
+				opacity: 0.5;
+			}
+		}
+	}
+	&__logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+	}
+	&__logo-img {
+		display: block;
+	}
+	&__logo-text {
+		font-size: rem(14);
+		color: #fff;
+	}
+}
 
 @import "_media";
