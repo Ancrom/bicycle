@@ -111,6 +111,22 @@ body {
 		&--1 {
 			.bike__big-image {
 				background: url(../img/work/01.jpg) center / cover no-repeat;
+				position: relative;
+				&:hover.bike__big-image::after {
+					opacity: 0.5;
+					transition: 0.5s ease-out;
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: #529e81;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					transition: 0.5s ease-out;
+				}
 			}
 			.bike__small-image {
 				background: url(../img/work/small-01.jpg) center / cover no-repeat;
@@ -119,6 +135,22 @@ body {
 		&--2 {
 			.bike__big-image {
 				background: url(../img/work/02.jpg) center / cover no-repeat;
+				position: relative;
+				&:hover.bike__big-image::after {
+					opacity: 0.5;
+					transition: 0.5s ease-out;
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: #529e81;
+					top: 0;
+					left: 0;
+					opacity: 0;
+					transition: 0.5s ease-out;
+				}
 			}
 			.bike__small-image {
 				background: url(../img/work/small-02.jpg) center / cover no-repeat;
@@ -126,7 +158,25 @@ body {
 		}
 		&--3 {
 			.bike__medium-image {
-				background: url(../img/work/03.jpg) center / cover no-repeat;
+				&--link {
+					background: url(../img/work/03.jpg) center / cover no-repeat;
+					position: relative;
+					&:hover.bike__medium-image--link::after {
+						opacity: 0.5;
+						transition: 0.5s ease-out;
+					}
+					&::after {
+						content: "";
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						background: #529e81;
+						top: 0;
+						left: 0;
+						opacity: 0;
+						transition: 0.5s ease-out;
+					}
+				}
 				&--second {
 					background: url(../img/work/04.jpg) center / cover no-repeat;
 				}
@@ -155,6 +205,7 @@ body {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		z-index: 5;
 	}
 	&__text-block,
 	&__small-image,
@@ -294,13 +345,7 @@ body {
 		&--link {
 			grid-column: span 2;
 			grid-row: span 1;
-			background: #58a589;
-			> img {
-				opacity: 0.2;
-			}
-			&:hover > img {
-				opacity: 0.5;
-			}
+			padding: 0;
 		}
 	}
 	&__logo {
@@ -316,6 +361,21 @@ body {
 	&__logo-text {
 		font-size: rem(14);
 		color: #fff;
+	}
+	.shop-top__image-link-w {
+		background: #529e81;
+		&:hover img {
+			opacity: 0.5;
+		}
+		img {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+			transition: 0.7s ease-out;
+		}
 	}
 }
 

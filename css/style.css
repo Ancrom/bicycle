@@ -166,6 +166,26 @@ body {
 
 .work__bike--1 .bike__big-image {
   background: url(../img/work/01.jpg) center/cover no-repeat;
+  position: relative;
+}
+
+.work__bike--1 .bike__big-image:hover.bike__big-image::after {
+  opacity: 0.5;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.work__bike--1 .bike__big-image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #529e81;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .work__bike--1 .bike__small-image {
@@ -174,14 +194,54 @@ body {
 
 .work__bike--2 .bike__big-image {
   background: url(../img/work/02.jpg) center/cover no-repeat;
+  position: relative;
+}
+
+.work__bike--2 .bike__big-image:hover.bike__big-image::after {
+  opacity: 0.5;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.work__bike--2 .bike__big-image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #529e81;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .work__bike--2 .bike__small-image {
   background: url(../img/work/small-02.jpg) center/cover no-repeat;
 }
 
-.work__bike--3 .bike__medium-image {
+.work__bike--3 .bike__medium-image--link {
   background: url(../img/work/03.jpg) center/cover no-repeat;
+  position: relative;
+}
+
+.work__bike--3 .bike__medium-image--link:hover.bike__medium-image--link::after {
+  opacity: 0.5;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.work__bike--3 .bike__medium-image--link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #529e81;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .work__bike--3 .bike__medium-image--second {
@@ -219,6 +279,7 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 5;
 }
 
 .bike__text-block, .bike__small-image, .bike__medium-image {
@@ -390,15 +451,7 @@ body {
 .shop-top__image--link {
   grid-column: span 2;
   grid-row: span 1;
-  background: #58a589;
-}
-
-.shop-top__image--link > img {
-  opacity: 0.2;
-}
-
-.shop-top__image--link:hover > img {
-  opacity: 0.5;
+  padding: 0;
 }
 
 .shop-top__logo {
@@ -417,6 +470,26 @@ body {
 .shop-top__logo-text {
   font-size: 0.875rem;
   color: #fff;
+}
+
+.shop-top .shop-top__image-link-w {
+  background: #529e81;
+}
+
+.shop-top .shop-top__image-link-w:hover img {
+  opacity: 0.5;
+}
+
+.shop-top .shop-top__image-link-w img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 0.7s ease-out;
+  transition: 0.7s ease-out;
 }
 
 .mailing {
