@@ -37,6 +37,8 @@ body {
 	}
 	&__shop {
 	}
+	&__mailing {
+	}
 }
 
 // ! HEADER
@@ -235,8 +237,27 @@ body {
 	&__top {
 	}
 	&__bottom {
+		padding: 75px 0;
+		background: #282f35;
+		display: flex;
+		justify-content: center;
 	}
 	&__button {
+		background: #282f35;
+		color: #fff;
+		font-size: rem(14);
+		font-weight: 400;
+		border: 1px solid #fff;
+		padding: 18px 55px;
+		letter-spacing: 3px;
+		transition: 0.3s ease-out;
+		&:hover {
+			background: #fff;
+			color: #282f35;
+		}
+		&:focus {
+			border: 1px solid #627483;
+		}
 	}
 }
 .shop-top {
@@ -295,6 +316,105 @@ body {
 	&__logo-text {
 		font-size: rem(14);
 		color: #fff;
+	}
+}
+
+// ! MAILING
+
+.main {
+}
+.mailing {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	padding: 105px 0;
+	&__container {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		grid-column: 3 / 5;
+	}
+	&__logo {
+		margin: 0 0 40px 0;
+	}
+	&__label {
+		font-style: italic;
+		margin: 0 0 40px 0;
+	}
+	&__form {
+	}
+}
+.mailing-form {
+	display: flex;
+	width: 100%;
+	&__input {
+		flex: 1 1 auto;
+		border: 1px solid #d3d7d9;
+		padding: 27px 30px;
+		margin: 0 9px 0 0;
+		color: #d3d7d9;
+		font-style: italic;
+		&:focus {
+			border: 1px solid #000;
+		}
+	}
+	&__button {
+		flex: 0 1 125px;
+		padding: 25px 45px;
+		background: #64c29e;
+		text-transform: uppercase;
+		color: #fff;
+		letter-spacing: 1px;
+		transition: 0.3s ease-out;
+		&:hover {
+			background: #529e81;
+		}
+		&:focus {
+			border: 1px solid #000;
+		}
+	}
+}
+
+// !FOOTER
+
+.footer {
+	padding: 100px 0;
+	background: $bg-color;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	&__container {
+		grid-column: 2 / 6;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__adress {
+		color: #8d9092;
+		font-style: italic;
+		font-size: rem(14);
+		line-height: 1.4;
+	}
+	&__adress-text {
+		span {
+			font-style: normal;
+			color: $text-color-second;
+			font-size: rem(16);
+		}
+	}
+	&__adress-link {
+	}
+	&__social {
+	}
+	&__social-link {
+		margin: 0 10px 0 0;
+	}
+	&__credits {
+		display: flex;
+		align-items: center;
+		font-size: rem(14);
+		span {
+			color: #8d9092;
+			font-style: italic;
+			margin: 0 10px 0 0;
+		}
 	}
 }
 

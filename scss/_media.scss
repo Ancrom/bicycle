@@ -97,6 +97,37 @@
 	.twitter {
 		padding: 50px 25px;
 	}
+	.mailing-form {
+		flex-flow: column;
+		&__input {
+			margin: 0 0 10px 0;
+		}
+		&__button {
+			flex: 1 1 auto;
+		}
+	}
+	.footer {
+		&__container {
+			flex-flow: column;
+			row-gap: 50px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.mailing {
+		&__container {
+			grid-column: 2 / 6;
+		}
+	}
+	.footer {
+		padding: 50px 0;
+		flex-flow: column;
+		&__container {
+			padding: 0 15px;
+			grid-column: 1 / 7;
+		}
+	}
 }
 
 @media (max-width: 575px) {
@@ -111,6 +142,10 @@
 	.text-block {
 		padding: 50 15px;
 	}
-	.container {
+	.mailing {
+		&__container {
+			padding: 0 15px;
+			grid-column: 1 / 7;
+		}
 	}
 }
